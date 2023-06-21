@@ -89,7 +89,7 @@ public abstract Class getClassName();
        /* for(int i=0;i< resultList.size();i++){
             System.out.println(resultList.get(i));
         }*/
-        System.out.println(resultList);
+//        System.out.println(resultList);
         return resultList;
     }
 
