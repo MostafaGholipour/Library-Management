@@ -20,7 +20,14 @@ public class Book extends BaseEntity {
     String writer;
     int numberPages;
     @ManyToOne
-    @JoinColumn(name = "BookGroups", referencedColumnName = "title")
+//    @JoinColumn(name = "BookGroups", referencedColumnName = "id")
     BookGroups bookGroups;
-    boolean ready;
+    boolean ready=true;
+
+    public Book(String name, String writer, int numberPages, BookGroups bookGroups, boolean ready) {
+        this.name = name;
+        this.writer = writer;
+        this.numberPages = numberPages;
+        this.bookGroups = bookGroups;
+    }
 }
