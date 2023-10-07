@@ -54,6 +54,7 @@ public class AdminRepositoryImpl extends BaseRepositoryImpl<Admin> implements Ad
             trust.setStatusTrust(statusTrust);
             trust.setStartTime(LocalDate.now());
             trust.getBook().setReady(false);
+            //booservice.update (trust.getbook);
             trustService.update(trust);
             System.out.println("-------------------");
             System.out.println("Success!");

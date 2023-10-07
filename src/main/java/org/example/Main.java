@@ -122,7 +122,7 @@ public class Main {
                 System.out.println("Entered Wrong number");
         }*/
 //        System.out.println(customerService.loadById(6L).getList());
-        Home home=new Home();
+       Home home=new Home();
         home.getHome();
     }
 }

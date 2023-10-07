@@ -12,7 +12,6 @@ import javax.persistence.ManyToOne;
 @Setter
 @Getter
 @NoArgsConstructor
-@ToString
 @Entity
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Book extends BaseEntity {
@@ -29,5 +28,17 @@ public class Book extends BaseEntity {
         this.writer = writer;
         this.numberPages = numberPages;
         this.bookGroups = bookGroups;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "Id  : "+getId()+
+                " name='" + name + '\'' +
+                ", writer='" + writer + '\'' +
+                ", numberPages=" + numberPages +
+                ", bookGroups=" + bookGroups +
+                ", ready=" + ready +
+                '}';
     }
 }

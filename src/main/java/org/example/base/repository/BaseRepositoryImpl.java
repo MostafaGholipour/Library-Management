@@ -40,12 +40,13 @@ public abstract Class getClassName();
 
     @Override
     public void deleteById(long id) {
+        E x = loadById(id);
         EntityTransaction transaction = null;
         try {
             EntityManager entityManager = Hibernate.getEntityManager();
             transaction = entityManager.getTransaction();
             transaction.begin();
-            entityManager.remove(id);
+            entityManager.remove(x);
             //entityManager.createQuery("delete from"+getClassName().getSimpleName()+" where id="+"'"+id+"'").executeUpdate();
             //entityManager.createQuery("delete from "+getClassName().getSimpleName()+" where id=:x").setParameter("x",entity.getId()).executeUpdate();
             transaction.commit();
